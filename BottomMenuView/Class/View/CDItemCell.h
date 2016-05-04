@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+
+UIKIT_EXTERN NSString *const CDTitleKey;
+UIKIT_EXTERN NSString *const CDImageNameKey;
+
+
 @interface CDItemCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewIcon;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 
+- (void)setDataToDisplayWithData:(NSDictionary *)item;
 
 @end

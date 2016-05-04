@@ -8,6 +8,9 @@
 
 #import "CDItemCell.h"
 
+NSString *const CDTitleKey = @"title";
+NSString *const CDImageNameKey = @"iamgeName";
+
 @implementation CDItemCell
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -29,6 +32,12 @@
     }
     
     return self;
+}
+
+- (void)setDataToDisplayWithData:(NSDictionary *)item
+{
+    self.labelName.text = [item objectForKey:CDTitleKey];
+    self.imageViewIcon.image = [UIImage imageNamed:[item objectForKey:CDImageNameKey]];
 }
 
 - (void)awakeFromNib {

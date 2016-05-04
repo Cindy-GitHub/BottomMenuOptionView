@@ -8,15 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
-
-extern NSString *const CDTitleKey;
-extern NSString *const CDImageNameKey;
+#import "CDItemCell.h"
 
 
+@protocol CDTabBarViewDelegate;
 @interface CDTabBarView : UIView
 
+@property (nonatomic,assign) id <CDTabBarViewDelegate> delegate;
+
 - (instancetype)initWithItemArray:(NSArray *)items;
-
 - (void)setNewItemArray:(NSArray *)items;
+- (CDItemCell *)cellAtIndex:(NSInteger)index;
+@end
 
+
+@protocol CDTabBarViewDelegate <NSObject>
+- (void)cdTabBarView:(CDTabBarView *)cdTabBar itemClickOn:(NSInteger)index;
 @end
