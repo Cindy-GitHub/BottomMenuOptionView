@@ -13,7 +13,6 @@
 		3713C3471CD8A0F90025E941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3713C3451CD8A0F90025E941 /* LaunchScreen.storyboard */; };
 		3713C3551CD8A3420025E941 /* CDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713C3531CD8A3420025E941 /* CDTestViewController.m */; };
 		3713C3561CD8A3420025E941 /* CDTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3713C3541CD8A3420025E941 /* CDTestViewController.xib */; };
-		3713C3591CD8A3660025E941 /* CDTabarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713C3581CD8A3660025E941 /* CDTabarView.m */; };
 		3713C3731CD8A9F00025E941 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713C35D1CD8A9F00025E941 /* MASCompositeConstraint.m */; };
 		3713C3741CD8A9F00025E941 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713C3601CD8A9F00025E941 /* MASConstraint.m */; };
 		3713C3751CD8A9F00025E941 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713C3621CD8A9F00025E941 /* MASConstraintMaker.m */; };
@@ -26,6 +25,10 @@
 		374A965E1CD99205005F344E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A965D1CD99205005F344E /* UIKit.framework */; };
 		374A96601CD99210005F344E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374A965F1CD99210005F344E /* Foundation.framework */; };
 		374A96621CD99533005F344E /* botm-nav-mudd.png in Resources */ = {isa = PBXBuildFile; fileRef = 374A96611CD99533005F344E /* botm-nav-mudd.png */; };
+		374A96651CD9D7EC005F344E /* CDTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A96641CD9D7EC005F344E /* CDTabBarView.m */; };
+		374A96691CD9D8F9005F344E /* CDItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A96671CD9D8F9005F344E /* CDItemCell.m */; };
+		374A966A1CD9D8F9005F344E /* CDItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374A96681CD9D8F9005F344E /* CDItemCell.xib */; };
+		374A966D1CD9E670005F344E /* CDTabarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A966C1CD9E670005F344E /* CDTabarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +42,6 @@
 		3713C3521CD8A3420025E941 /* CDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestViewController.h; sourceTree = "<group>"; };
 		3713C3531CD8A3420025E941 /* CDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestViewController.m; sourceTree = "<group>"; };
 		3713C3541CD8A3420025E941 /* CDTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDTestViewController.xib; sourceTree = "<group>"; };
-		3713C3571CD8A3660025E941 /* CDTabarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTabarView.h; sourceTree = "<group>"; };
-		3713C3581CD8A3660025E941 /* CDTabarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTabarView.m; sourceTree = "<group>"; };
 		3713C35C1CD8A9F00025E941 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		3713C35D1CD8A9F00025E941 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		3713C35E1CD8A9F00025E941 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -67,6 +68,13 @@
 		374A965D1CD99205005F344E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		374A965F1CD99210005F344E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		374A96611CD99533005F344E /* botm-nav-mudd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botm-nav-mudd.png"; sourceTree = "<group>"; };
+		374A96631CD9D7EC005F344E /* CDTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTabBarView.h; sourceTree = "<group>"; };
+		374A96641CD9D7EC005F344E /* CDTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTabBarView.m; sourceTree = "<group>"; };
+		374A96661CD9D8F9005F344E /* CDItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDItemCell.h; sourceTree = "<group>"; };
+		374A96671CD9D8F9005F344E /* CDItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDItemCell.m; sourceTree = "<group>"; };
+		374A96681CD9D8F9005F344E /* CDItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDItemCell.xib; sourceTree = "<group>"; };
+		374A966B1CD9E670005F344E /* CDTabarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTabarView.h; sourceTree = "<group>"; };
+		374A966C1CD9E670005F344E /* CDTabarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTabarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +162,13 @@
 		3713C3511CD8A31E0025E941 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3713C3571CD8A3660025E941 /* CDTabarView.h */,
-				3713C3581CD8A3660025E941 /* CDTabarView.m */,
+				374A966B1CD9E670005F344E /* CDTabarView.h */,
+				374A966C1CD9E670005F344E /* CDTabarView.m */,
+				374A96631CD9D7EC005F344E /* CDTabBarView.h */,
+				374A96641CD9D7EC005F344E /* CDTabBarView.m */,
+				374A96661CD9D8F9005F344E /* CDItemCell.h */,
+				374A96671CD9D8F9005F344E /* CDItemCell.m */,
+				374A96681CD9D8F9005F344E /* CDItemCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374A966A1CD9D8F9005F344E /* CDItemCell.xib in Resources */,
 				3713C3471CD8A0F90025E941 /* LaunchScreen.storyboard in Resources */,
 				3713C3561CD8A3420025E941 /* CDTestViewController.xib in Resources */,
 				3713C3441CD8A0F90025E941 /* Assets.xcassets in Resources */,
@@ -270,15 +284,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3713C3751CD8A9F00025E941 /* MASConstraintMaker.m in Sources */,
-				3713C3591CD8A3660025E941 /* CDTabarView.m in Sources */,
 				3713C33C1CD8A0F90025E941 /* AppDelegate.m in Sources */,
+				374A96691CD9D8F9005F344E /* CDItemCell.m in Sources */,
 				3713C3741CD8A9F00025E941 /* MASConstraint.m in Sources */,
 				3713C3761CD8A9F00025E941 /* MASLayoutConstraint.m in Sources */,
 				3713C3791CD8A9F00025E941 /* NSArray+MASAdditions.m in Sources */,
 				3713C3781CD8A9F00025E941 /* MASViewConstraint.m in Sources */,
+				374A96651CD9D7EC005F344E /* CDTabBarView.m in Sources */,
 				3713C3771CD8A9F00025E941 /* MASViewAttribute.m in Sources */,
 				3713C37B1CD8A9F00025E941 /* View+MASAdditions.m in Sources */,
 				3713C3551CD8A3420025E941 /* CDTestViewController.m in Sources */,
+				374A966D1CD9E670005F344E /* CDTabarView.m in Sources */,
 				3713C3391CD8A0F90025E941 /* main.m in Sources */,
 				3713C3731CD8A9F00025E941 /* MASCompositeConstraint.m in Sources */,
 				3713C37A1CD8A9F00025E941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

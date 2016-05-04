@@ -7,12 +7,13 @@
 //
 
 #import "CDTestViewController.h"
-#import "CDTabarView.h"
+#import "CDTabBarView.h"
 
 
 @interface CDTestViewController ()
 {
-    CDTabarView *_tabaer;
+//    CDTabarView *_tabaer;
+    CDTabBarView *_tabaer;
 }
 @end
 
@@ -22,10 +23,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"Test Bottom Menu";
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
+    NSArray *array = @[@{CDTitleKey:@"itemOne", CDImageNameKey:@"botm-nav-mudd"},@{CDTitleKey:@"itemTwo", CDImageNameKey:@"botm-nav-mudd"},@{CDTitleKey:@"itemThree", CDImageNameKey:@"botm-nav-mudd"},@{CDTitleKey:@"itemFour", CDImageNameKey:@"botm-nav-mudd"},@{CDTitleKey:@"itemFive", CDImageNameKey:@"botm-nav-mudd"}];
     
-    NSArray *array = @[@{TitleKey:@"itemOne", ImageNameKey:@"botm-nav-mudd"},@{TitleKey:@"itemTwo", ImageNameKey:@"botm-nav-mudd"},@{TitleKey:@"itemThree", ImageNameKey:@"botm-nav-mudd"},@{TitleKey:@"itemFour", ImageNameKey:@"botm-nav-mudd"},@{TitleKey:@"itemFive", ImageNameKey:@"botm-nav-mudd"}];
-    _tabaer = [[CDTabarView alloc] initWithSize:CGSizeMake(self.view.bounds.size.width, 50.0) itemArray:array];
+//    _tabaer = [[CDTabarView alloc] initWithSize:CGSizeMake(self.view.bounds.size.width, 50.0) itemArray:array];
+    _tabaer = [[CDTabBarView alloc] initWithItemArray:array];
     [self.view addSubview:_tabaer];
     _tabaer.clipsToBounds = YES;
 
@@ -39,6 +42,7 @@
         make.bottom.equalTo(self.view).offset(-10);
         make.height.equalTo(@(55));
     }];
+    [self.view layoutIfNeeded];
 
 }
 

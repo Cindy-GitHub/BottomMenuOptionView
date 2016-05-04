@@ -10,8 +10,8 @@
 #import "Masonry.h"
 
 
-extern NSString *const TitleKey;
-extern NSString *const ImageNameKey;
+//extern NSString *const TitleKey;
+//extern NSString *const ImageNameKey;
 
 
 @interface CDTabarView : UIView

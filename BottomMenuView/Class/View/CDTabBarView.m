@@ -1,0 +1,123 @@
+//
+//  CDTabBarView.m
+//  BottomMenuView
+//
+//  Created by Cindy on 16/5/4.
+//  Copyright © 2016年 Cindy. All rights reserved.
+//
+
+#import "CDTabBarView.h"
+#import "CDItemCell.h"
+
+
+NSString *const CDTitleKey = @"title";
+NSString *const CDImageNameKey = @"iamgeName";
+
+
+@interface CDTabBarView() <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+{
+    NSArray *_items;
+    UICollectionView *_collectionView;
+}
+@end
+
+
+@implementation CDTabBarView
+
+- (instancetype)initWithItemArray:(NSArray *)items
+{
+    self = [super init];
+    if (self) {
+        _items = items;
+        //  初始化装载控件
+        UICollectionViewFlowLayout *flowLayout= [[UICollectionViewFlowLayout alloc]init];
+//        flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        _collectionView.collectionViewLayout = flowLayout;
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 50) collectionViewLayout:flowLayout];
+        _collectionView.backgroundColor = [UIColor redColor];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        [self addSubview:_collectionView];
+        [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self);
+            make.left.equalTo(self);
+            make.bottom.equalTo(self);
+            make.right.equalTo(self);
+        }]; //  添加约束条件
+        
+    }
+    
+    self.layer.borderColor = [UIColor redColor].CGColor;
+    self.layer.borderWidth = 0.5f;
+    
+    self.layer.cornerRadius = 2.0;
+    
+    [self initMenuItem];
+    return self;
+}
+
+- (void)layoutSubviews
+{
+    [self initMenuItem];
+}
+
+- (void)initMenuItem
+{
+    [_collectionView reloadData];
+}
+
+- (void)setNewItemArray:(NSArray *)items
+{
+    _items = items;
+    [self initMenuItem];
+}
+
+#pragma mark  - UICollectionView Delegate
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * CellIdentifier = @"MyCollectionCellID";
+    [_collectionView registerClass:[CDItemCell class] forCellWithReuseIdentifier:@"MyCollectionCellID"];
+    CDItemCell * cell = (CDItemCell *)[_collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    cell.labelName.text = [_items[[indexPath row]] objectForKey:CDTitleKey];
+    cell.imageViewIcon.image = [UIImage imageNamed:[_items[[indexPath row]] objectForKey:CDImageNameKey]];
+    
+    NSLog(@"%zi",[indexPath row]);
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"item  section=%zi row=%zi",[indexPath section],[indexPath row]);
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"itemSize  section=%zi row=%zi  \n%@",[indexPath section],[indexPath row],NSStringFromCGRect(self.bounds));
+    return CGSizeMake((self.bounds.size.width - ([_items count] -1)*0.5)/[_items count], self.bounds.size.height);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0.5;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    NSLog(@"numberOfItemsInSection = %zi   number = %zi",section,[_items count]);
+    return [_items count];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    NSLog(@"numberOfSectionsInCollectionView = %zi",1);
+    return 1;
+}
+
+@end
