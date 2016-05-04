@@ -28,7 +28,6 @@
 		374A96651CD9D7EC005F344E /* CDTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A96641CD9D7EC005F344E /* CDTabBarView.m */; };
 		374A96691CD9D8F9005F344E /* CDItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A96671CD9D8F9005F344E /* CDItemCell.m */; };
 		374A966A1CD9D8F9005F344E /* CDItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374A96681CD9D8F9005F344E /* CDItemCell.xib */; };
-		374A966D1CD9E670005F344E /* CDTabarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A966C1CD9E670005F344E /* CDTabarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,8 +72,6 @@
 		374A96661CD9D8F9005F344E /* CDItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDItemCell.h; sourceTree = "<group>"; };
 		374A96671CD9D8F9005F344E /* CDItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDItemCell.m; sourceTree = "<group>"; };
 		374A96681CD9D8F9005F344E /* CDItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDItemCell.xib; sourceTree = "<group>"; };
-		374A966B1CD9E670005F344E /* CDTabarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTabarView.h; sourceTree = "<group>"; };
-		374A966C1CD9E670005F344E /* CDTabarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTabarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +159,6 @@
 		3713C3511CD8A31E0025E941 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				374A966B1CD9E670005F344E /* CDTabarView.h */,
-				374A966C1CD9E670005F344E /* CDTabarView.m */,
 				374A96631CD9D7EC005F344E /* CDTabBarView.h */,
 				374A96641CD9D7EC005F344E /* CDTabBarView.m */,
 				374A96661CD9D8F9005F344E /* CDItemCell.h */,
@@ -294,7 +289,6 @@
 				3713C3771CD8A9F00025E941 /* MASViewAttribute.m in Sources */,
 				3713C37B1CD8A9F00025E941 /* View+MASAdditions.m in Sources */,
 				3713C3551CD8A3420025E941 /* CDTestViewController.m in Sources */,
-				374A966D1CD9E670005F344E /* CDTabarView.m in Sources */,
 				3713C3391CD8A0F90025E941 /* main.m in Sources */,
 				3713C3731CD8A9F00025E941 /* MASCompositeConstraint.m in Sources */,
 				3713C37A1CD8A9F00025E941 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
